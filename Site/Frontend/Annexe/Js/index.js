@@ -5,5 +5,5 @@
 */
 
 $("#lancerInterface").click(function(){
-    alert("Modifié avec RealTest V2");
+    alert("Modifié avec RealTest V3");
 });
