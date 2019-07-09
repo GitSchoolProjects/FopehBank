@@ -5,5 +5,5 @@
 */
 
 $("#lancerInterface").click(function(){
-    alert("Test du fichier Real test");
+    alert("Modifié avec RealTest");
 });
