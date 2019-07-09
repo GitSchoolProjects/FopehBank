@@ -5,5 +5,5 @@
 */
 
 $("#lancerInterface").click(function(){
-    alert("Modifié en mode master");
+    alert("Modifié en mode test");
 });
