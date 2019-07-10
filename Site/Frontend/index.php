@@ -9,9 +9,13 @@
 </head>
 <body>
 
-    
+    <!-- Inclusions des différentes pages utiles -->
+    <?php
+        require_once "Accueil/Charte.php";
+        require_once "Forum/ListeCommentaire.php";
+    ?>
     <!-- Boutton de test pour le lancement des interfaces -->
-    <button class="ui blue button" id="lancerInterface">Cliquez ici</button>
+    <button class="ui blue button" id="lancerModalListeCommentaire">Cliquez ici</button>
 
 
     <script src="./Annexe/Js/jquery.js"></script>
