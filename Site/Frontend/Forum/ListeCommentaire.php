@@ -8,7 +8,7 @@
     </div>
     <!-- La dite Réponse -->
     <div class="description">
-        <b>Réponse</b> : 
+        <b>Réponse de "bdd"</b> : 
         <div class="scrolling content">
             "bdd"
         </div>

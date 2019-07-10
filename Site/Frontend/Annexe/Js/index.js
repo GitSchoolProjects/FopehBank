@@ -52,6 +52,10 @@ $("#accepterCharte").click(function(){
     fermetureDeLaCharte("Accepter");
 });
 
+/**************************************/
+/* PARTIE CONCERNANT LE DOSSIER FORUM */
+/**************************************/
+
 // Sous-partie: ListeCommentaire.php
 // Fonction de presentation de la liste des commentaires
 function afficherMasquerListeCommentaire(etat){
@@ -75,4 +79,36 @@ $("#"+idBouttonAffichageModalListeCommentaire).click(function(){
 // Fermeture de la liste des commentaires
 $("#fermerModalListeCommentaire").click(function(){
     afficherMasquerListeCommentaire("hide");
+
+    afficherMasquerListeReponse("show");
+});
+
+// Sous-partie: ListeReponse.php
+// Fonction de presentation de la liste des réponses
+function afficherMasquerListeReponse(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Liste des réponses fermée !");
+        break;
+        case "show":
+            console.log("[+] Liste des commentairesréponses ouverte !");
+        break;
+    }
+    $("#modalListeReponse").modal(etat);
+}
+
+// Affichage de la liste des réponses
+var idBouttonAffichageModalListeCommentaire = "lancerModalListeReponse";
+$("#"+idBouttonAffichageModalListeCommentaire).click(function(){
+    afficherMasquerListeReponse("show");
+});
+
+// Fermeture de la liste des commentaires
+$("#fermerModalListeReponse").click(function(){
+    afficherMasquerListeReponse("hide");
+});
+
+// Affichage de la liste des commentaires
+$("#voirListeCommentaire").click(function(){
+    afficherMasquerListeCommentaire("show");
 });
