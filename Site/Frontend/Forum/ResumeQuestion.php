@@ -4,7 +4,7 @@
     <!-- L'entête -->
     <div class="header">
         <i class="question circle outline icon"></i>
-        Question N° "bdd"
+        Résumé de la question N° "bdd"
     </div>
     <!-- Le contenu -->
     <div class="scrolling content">

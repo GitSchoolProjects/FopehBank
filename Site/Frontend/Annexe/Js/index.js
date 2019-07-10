@@ -115,6 +115,11 @@ $("#voirListeCommentaire").click(function(){
     afficherMasquerListeCommentaire("show");
 });
 
+// Affichage du formulaire de commentaire
+$("#commenterReponse").click(function(){
+
+});
+
 // Sous-partie: ResumeQuestion.php
 // Fonction de presentation du résumé de la question
 function afficherMasquerResumeQuestion(etat){
@@ -148,4 +153,34 @@ $("#listeReponseModalResumeQuestion").click(function(){
 // Afficher le formulaire de réponse à la question
 $("#repondreModalResumeQuestion").click(function(){
 
+});
+
+// Sous-partie: Commentaire.php
+// Fonction de presentation du fromulaire de commentaire
+function afficherMasquerFormulaireCommentaire(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Le formulaire de commentaire est fermé !");
+        break;
+        case "show":
+            console.log("[+] Le formulaire de commentaire est ouvert !");
+        break;
+    }
+    $("#formulaireCommentaire").modal(etat);
+}
+
+// Affichage du formulaire de commentaire
+var idBouttonAffichageModalResumeQuestion = "lancerFormulaireCommentaire";
+$("#"+idBouttonAffichageModalResumeQuestion).click(function(){
+    afficherMasquerFormulaireCommentaire("show");
+});
+
+// Fermeture du formulaire de commentaire
+$("#fermerFormulaireCommentaire").click(function(){
+    afficherMasquerFormulaireCommentaire("hide");
+});
+
+// Effcement du commentaire
+$("#effacerFormulaireCommentaire").click(function(){
+    $("#texteDuCommentaire").val("");
 });
