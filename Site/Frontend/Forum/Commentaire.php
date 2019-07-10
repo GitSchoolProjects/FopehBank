@@ -3,7 +3,7 @@
 <div class="ui modal" id="formulaireCommentaire">
     <!-- L'entête -->
     <div class="header">
-        <i class="file alternate outline icon"></i>
+        <i class="comment alternate outline icon"></i>
         Commenter cette réponse ?
     </div>
     <!-- Le contenu -->

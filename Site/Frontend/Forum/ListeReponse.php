@@ -26,6 +26,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="right floated content">
+                    <div class="ui vertical animated blue button" id="commenterReponse">
+                        <div class="visible content">Commenter</div>
+                        <div class="hidden content">
+                            <i class="comment alternate outline icon"></i>
+                        </div>
+                    </div>
+                </div>
                 <!-- <img class="ui avatar image" src="../images/avatar2/small/rachel.png"> -->
                 <i class="user icon"></i>
                 

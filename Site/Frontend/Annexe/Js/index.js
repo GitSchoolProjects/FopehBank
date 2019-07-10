@@ -10,7 +10,7 @@
 /****************************************/
 
 // Sous-partie : Charte.php
-// Fonction de presentation de la charte
+// Fonction de présentation de la charte
 function afficherMasquerModalDeLaCharte(etat){
     switch(etat){
         case "hide":
@@ -57,7 +57,7 @@ $("#accepterCharte").click(function(){
 /**************************************/
 
 // Sous-partie: ListeCommentaire.php
-// Fonction de presentation de la liste des commentaires
+// Fonction de présentation de la liste des commentaires
 function afficherMasquerListeCommentaire(etat){
     switch(etat){
         case "hide":
@@ -84,7 +84,7 @@ $("#fermerModalListeCommentaire").click(function(){
 });
 
 // Sous-partie: ListeReponse.php
-// Fonction de presentation de la liste des réponses
+// Fonction de présentation de la liste des réponses
 function afficherMasquerListeReponse(etat){
     switch(etat){
         case "hide":
@@ -121,7 +121,7 @@ $("#commenterReponse").click(function(){
 });
 
 // Sous-partie: ResumeQuestion.php
-// Fonction de presentation du résumé de la question
+// Fonction de présentation du résumé de la question
 function afficherMasquerResumeQuestion(etat){
     switch(etat){
         case "hide":
@@ -156,7 +156,7 @@ $("#repondreModalResumeQuestion").click(function(){
 });
 
 // Sous-partie: Commentaire.php
-// Fonction de presentation du fromulaire de commentaire
+// Fonction de présentation du formulaire de commentaire
 function afficherMasquerFormulaireCommentaire(etat){
     switch(etat){
         case "hide":
@@ -170,8 +170,8 @@ function afficherMasquerFormulaireCommentaire(etat){
 }
 
 // Affichage du formulaire de commentaire
-var idBouttonAffichageModalResumeQuestion = "lancerFormulaireCommentaire";
-$("#"+idBouttonAffichageModalResumeQuestion).click(function(){
+var idBouttonAffichageFormulaireCommentaire = "lancerFormulaireCommentaire";
+$("#"+idBouttonAffichageFormulaireCommentaire).click(function(){
     afficherMasquerFormulaireCommentaire("show");
 });
 
@@ -180,7 +180,118 @@ $("#fermerFormulaireCommentaire").click(function(){
     afficherMasquerFormulaireCommentaire("hide");
 });
 
-// Effcement du commentaire
+// Validation du commentaire
+$("#soumettreFormulaireCommentaire").click(function(){
+    afficherMasquerFormulaireCommentaire("hide");
+});
+
+// Effacement du commentaire
 $("#effacerFormulaireCommentaire").click(function(){
     $("#texteDuCommentaire").val("");
+});
+
+// Sous-partie: Question.php
+// Fonction de présentation du formulaire de la question
+function afficherMasquerFormulaireQuestion(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Le formulaire de question est fermé !");
+        break;
+        case "show":
+            console.log("[+] Le formulaire de question est ouvert !");
+        break;
+    }
+    $("#formulaireQuestion").modal(etat);
+}
+
+// Affichage du formulaire de question
+var idBouttonAffichageFormulaireQuestion = "lancerFormulaireQuestion";
+$("#"+idBouttonAffichageFormulaireQuestion).click(function(){
+    afficherMasquerFormulaireQuestion("show");
+});
+
+// Fermeture du formulaire de question
+$("#fermerFormulaireQuestion").click(function(){
+    afficherMasquerFormulaireQuestion("hide");
+});
+
+// Validation de la question
+$("#soumettreFormulaireQuestion").click(function(){
+    afficherMasquerFormulaireQuestion("hide");
+});
+
+// Effacement de la question
+$("#effacerFormulaireQuestion").click(function(){
+    $("#texteQuestion").val("");
+    $("#texteTitreQuestion").val("");
+});
+
+// Sous-partie: Reponse.php
+// Fonction de présentation du formulaire de la réponse
+function afficherMasquerFormulaireReponse(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Le formulaire de réponse est fermé !");
+        break;
+        case "show":
+            console.log("[+] Le formulaire de réponse est ouvert !");
+        break;
+    }
+    $("#formulaireReponse").modal(etat);
+}
+
+// Affichage du formulaire de réponse
+var idBouttonAffichageFormulaireReponse = "lancerFormulaireReponse";
+$("#"+idBouttonAffichageFormulaireReponse).click(function(){
+    afficherMasquerFormulaireReponse("show");
+});
+
+// Fermeture du formulaire de réponse
+$("#fermerFormulaireReponse").click(function(){
+    afficherMasquerFormulaireReponse("hide");
+});
+
+// Validation de la réponse
+$("#soumettreFormulaireReponse").click(function(){
+    afficherMasquerFormulaireReponse("hide");
+});
+
+// Effacement de la réponse
+$("#effacerFormulaireReponse").click(function(){
+    $("#texteReponse").val("");
+});
+
+// Sous-partie: Recommandation.php
+// Fonction de présentation du fromulaire de recommmandation
+function afficherMasquerFormulaireRecommandation(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Le formulaire de recommandation est fermé !");
+        break;
+        case "show":
+            console.log("[+] Le formulaire de recommandation est ouvert !");
+        break;
+    }
+    $("#formulaireRecommandation").modal(etat);
+}
+
+// Affichage du formulaire de recommandation
+var idBouttonAffichageModalResumeQuestion = "lancerFormulaireRecommandation";
+$("#"+idBouttonAffichageModalResumeQuestion).click(function(){
+    afficherMasquerFormulaireRecommandation("show");
+});
+
+// Fermeture du formulaire de recommandation
+$("#fermerFormulaireRecommandation").click(function(){
+    afficherMasquerFormulaireRecommandation("hide");
+});
+
+// Validation du formulaire de recommandation
+$("#soumettreFormulaireRecommandation").click(function(){
+    afficherMasquerFormulaireRecommandation("hide");
+});
+
+// Effacement du formulaire de recommandation
+$("#effacerFormulaireRecommandation").click(function(){
+    $("#texteDeRecommandation").val("");
 });
