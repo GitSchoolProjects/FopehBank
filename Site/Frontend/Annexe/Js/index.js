@@ -91,7 +91,7 @@ function afficherMasquerListeReponse(etat){
             console.log("[+] Liste des réponses fermée !");
         break;
         case "show":
-            console.log("[+] Liste des commentairesréponses ouverte !");
+            console.log("[+] Liste des réponses ouverte !");
         break;
     }
     $("#modalListeReponse").modal(etat);
@@ -106,9 +106,46 @@ $("#"+idBouttonAffichageModalListeCommentaire).click(function(){
 // Fermeture de la liste des commentaires
 $("#fermerModalListeReponse").click(function(){
     afficherMasquerListeReponse("hide");
+
+    afficherMasquerResumeQuestion("show");
 });
 
 // Affichage de la liste des commentaires
 $("#voirListeCommentaire").click(function(){
     afficherMasquerListeCommentaire("show");
+});
+
+// Sous-partie: ResumeQuestion.php
+// Fonction de presentation du résumé de la question
+function afficherMasquerResumeQuestion(etat){
+    switch(etat){
+        case "hide":
+            console.log("[+] Le résumé de la question est fermé !");
+        break;
+        case "show":
+            console.log("[+] Le résumé de la question est ouvert !");
+        break;
+    }
+    $("#modalResumeQuestion").modal(etat);
+}
+
+// Affichage du résumé de la question
+var idBouttonAffichageModalResumeQuestion = "lancerModalResumeQuestion";
+$("#"+idBouttonAffichageModalResumeQuestion).click(function(){
+    afficherMasquerResumeQuestion("show");
+});
+
+// Fermeture du résumé de la question
+$("#fermerModalResumeQuestion").click(function(){
+    afficherMasquerResumeQuestion("hide");
+});
+
+// Afficher la liste des réponses
+$("#listeReponseModalResumeQuestion").click(function(){
+    afficherMasquerListeReponse("show");
+});
+
+// Afficher le formulaire de réponse à la question
+$("#repondreModalResumeQuestion").click(function(){
+
 });
